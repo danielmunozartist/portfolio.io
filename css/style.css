@@ -189,10 +189,10 @@ span {
 
     #trabajos {
         margin-top: 16px;
-        height: 55vh;
+        height: 58vh;
         overflow: auto;
         border-radius: 5px;
-        width: 95%;
+      
     }
 
     #trabajos::-webkit-scrollbar {
@@ -209,7 +209,7 @@ span {
     }
 
     #infoAbout {
-        margin-top: 20px;
+        margin-top: 30px;
     }
 
     #container-galery {
@@ -264,6 +264,9 @@ span {
         right: 10px;
         top: 5px;
     }
+    #trabajos {
+        height: 61vh;
+    }
 
     .modal {
         padding: 90px 150px;
@@ -274,11 +277,10 @@ span {
     #galeria {
         grid-template-columns: 1fr 1fr 1fr;
     }
-
     #trabajos {
-        height: 65vh;
+        height: 60vh;
+        width: 96%;
     }
-
     .card:first-child img {
         height: 400px;
     }
@@ -330,6 +332,9 @@ span {
     .recor {
         width: 100%;
     }
+    #trabajos {
+        height: 62vh;
+    }
     
 }
 @media (min-width: 1920px) {
@@ -337,6 +342,4 @@ span {
     .modal {
         padding: 90px 600px;
     }
-
-    
 }
