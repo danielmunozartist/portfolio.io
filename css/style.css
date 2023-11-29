@@ -189,7 +189,7 @@ span {
 
     #trabajos {
         margin-top: 16px;
-        height: 50vh;
+        height: 55vh;
         overflow: auto;
         border-radius: 5px;
         width: 95%;
@@ -276,7 +276,7 @@ span {
     }
 
     #trabajos {
-        height: 60vh;
+        height: 65vh;
     }
 
     .card:first-child img {
