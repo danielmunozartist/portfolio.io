@@ -21,7 +21,6 @@ fetch('./img/imagenes.json')
     .then(data => {
         const galeriaSection = document.getElementById('galeria');
         const modal = document.getElementById('myModal');
-        const modalImage = document.getElementById('modalImage');
         const additionalContent = document.getElementById('additionalContent');
         const closeIcon = document.getElementById('colse'); // Elemento con el ícono de cierre
 
@@ -51,11 +50,6 @@ fetch('./img/imagenes.json')
 
             cardElement.addEventListener('click', function () {
                 modal.style.display = 'block';
-                modalImage.src = imagen.url;
-
-                // modalImage.addEventListener('click', function () {
-                //     window.open(imagen.url, '_blank');
-                // });
             
                 // Limpiar el contenido adicional antes de agregar nuevo contenido
                 additionalContent.innerHTML = '';
@@ -74,6 +68,10 @@ fetch('./img/imagenes.json')
                             videoElement.loop = true;
                             videoElement.className = 'imgC';
                             contentElement.appendChild(videoElement);
+                             // Agregar evento de clic para abrir la imagen en una nueva pestaña
+                             videoElement.addEventListener('click', function () {
+                                window.open(imagen.content[0][key], '_blank');
+                            });
                         } else {
                             const imgElement = document.createElement('img');
                             imgElement.src = imagen.content[0][key];
@@ -119,6 +117,7 @@ fetch('./img/imagenes.json')
 
             // Agregar la tarjeta a la sección de galería
             galeriaSection.appendChild(cardElement);
+        
         });
     })
     .catch(error => console.error('Error al cargar imagenes.json', error));
