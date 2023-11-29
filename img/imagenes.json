@@ -3,6 +3,7 @@
     "url": "./img/13/daniel_muñoz_finalconcept.jpg",
     "content": [
       {
+        "url": "./img/13/daniel_muñoz_finalconcept.jpg",
         "url1": "./img/13/gif-progress.gif",
         "url2": "./img/13/render2.png"
       }
@@ -12,6 +13,7 @@
     "url": "./img/5/imagen4.jpeg",
     "content": [
       {
+        "url": "./img/5/imagen4.jpeg",
         "url1": "./img/5/4.jpg",
         "url2": "./img/5/imagen3.jpeg",
         "url3": "./img/5/3.jpg"
@@ -22,6 +24,7 @@
     "url": "./img/9/fondooswald-pospocolor_.jpg",
     "content": [
       {
+        "url": "./img/9/fondooswald-pospocolor_.jpg",
         "url1": "./img/9/oswald_back_line_1.jpg",
         "url2": "./img/9/oswald_back_line.jpg"
       }
@@ -31,6 +34,7 @@
     "url": "./img/10/oswald_fondo_1.jpg",
     "content": [
       {
+        "url": "./img/10/oswald_fondo_1.jpg",
         "url1": "./img/10/idea_color&light.jpg"
       }
     ]
@@ -39,6 +43,7 @@
     "url": "./img/11/Sin título-1.png",
     "content": [
       {
+        "url": "./img/11/Sin título-1.png",
         "url1": "./img/11/GYM.png",
         "url2": "./img/11/Sin título-1 copia.png"
       }
@@ -48,6 +53,7 @@
     "url": "./img/12/background_danielmuñoz.jpg",
     "content": [
       {
+        "url": "./img/12/background_danielmuñoz.jpg",
         "url1": "./img/12/progress_danielmuñoz.gif"
       }
     ]
@@ -56,18 +62,25 @@
     "url": "./img/15/portada.png",
     "content": [
       {
+        "url": "./img/15/portada.png",
         "url1": "./img/15/photo1701130332 (1).jpeg",
         "url2": "./img/15/photo1701130332.jpeg"
       }
     ]
   },
   {
-    "url": "./img/16/photo1701130332.jpeg"
+    "url": "./img/16/photo1701130332.jpeg",
+    "content": [
+      {
+        "url": "./img/16/photo1701130332.jpeg"
+      }
+    ]
   },
   {
     "url": "./img/3/joan_fennek.jpg",
     "content": [
       {
+        "url": "./img/3/joan_fennek.jpg",
         "url1": "./img/3/compo.jpg",
         "url2": "./img/3/thumbnails.jpg",
         "url3": "./img/3/ZBrush Movie1.mp4"
@@ -75,12 +88,18 @@
     ]
   },
   {
-    "url": "./img/7/5.jpg"
+    "url": "./img/7/5.jpg",
+    "content": [
+      {
+        "url": "./img/7/5.jpg"
+      }
+    ]
   },
   {
     "url": "./img/14/photo1701130332 (8).jpeg",
     "content": [
       {
+        "url": "./img/14/photo1701130332 (8).jpeg",
         "url1": "./img/14/photo1701130332 (3).jpeg",
         "url2": "./img/14/photo1701130332 (4).jpeg",
         "url3": "./img/14/photo1701130332 (5).jpeg",
