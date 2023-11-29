@@ -35,7 +35,7 @@ fetch('./img/imagenes.json')
             if (index === 1 || index === 10) {
                 imgElement.style.objectPosition = 'center 10%';
             }
-            if (index === 7 || index === 9 ) {
+            if (index === 7 || index === 9) {
                 imgElement.style.objectPosition = '100% 100%';
             }
             if (index == 6) {
@@ -53,14 +53,18 @@ fetch('./img/imagenes.json')
                 modal.style.display = 'block';
                 modalImage.src = imagen.url;
 
+                // modalImage.addEventListener('click', function () {
+                //     window.open(imagen.url, '_blank');
+                // });
+            
                 // Limpiar el contenido adicional antes de agregar nuevo contenido
                 additionalContent.innerHTML = '';
-
+            
                 // Recorrer cada elemento del contenido y agregarlo al modal
                 for (const key in imagen.content[0]) {
                     if (imagen.content[0].hasOwnProperty(key)) {
                         const contentElement = document.createElement('div');
-
+            
                         // Verificar si el contenido es una imagen o un video
                         if (imagen.content[0][key].endsWith('.mp4')) {
                             const videoElement = document.createElement('video');
@@ -75,25 +79,31 @@ fetch('./img/imagenes.json')
                             imgElement.src = imagen.content[0][key];
                             imgElement.alt = `Contenido adicional ${key}`;
                             imgElement.className = 'imgC';
+            
+                            // Agregar evento de clic para abrir la imagen en una nueva pestaña
+                            imgElement.addEventListener('click', function () {
+                                window.open(imagen.content[0][key], '_blank');
+                            });
+            
                             contentElement.appendChild(imgElement);
                         }
-
-                        additionalContent.appendChild(contentElement);
+            
+                        additionalContent.appendChild(contentElement); 
                     }
                 }
-
+            
                 // Ajusta la posición del scroll a la parte superior del modal
                 document.body.style.overflow = 'hidden'; // Desactiva el scroll del body
                 modal.scrollTop = 0; // Ajusta la posición del scroll del modal
             });
 
- // Cierra el modal al hacer clic en el ícono de cierre
- closeIcon.addEventListener('click', function () {
-    modal.style.display = 'none';
+            // Cierra el modal al hacer clic en el ícono de cierre
+            closeIcon.addEventListener('click', function () {
+                modal.style.display = 'none';
 
-    // Restaura el scroll del body
-    document.body.style.overflow = 'auto';
-});
+                // Restaura el scroll del body
+                document.body.style.overflow = 'auto';
+            });
 
             // Cierra el modal al hacer clic fuera de él
             window.addEventListener('click', function (event) {
