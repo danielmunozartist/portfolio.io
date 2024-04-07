@@ -9,6 +9,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
 .inicio {
     width: 250px;
 }
@@ -20,15 +21,9 @@
 
 /* Estilos generales */
 #perfil {
-    background-color: #000000;
-    color: #fff;
+
     text-align: center;
     padding: 20px;
-}
-
-.colorF,
-.card-img-top {
-    background-color: #d9d0bf;
 }
 
 .name {
@@ -39,16 +34,18 @@
     height: 250px;
     object-fit: cover;
     border-radius: 5px;
-    cursor: pointer;
+    cursor: pointer;border:
 }
+
 
 .avatar {
     display: none;
-    
+
 }
 
 #galeria {
     margin: auto;
+    width: 100%;-
 }
 
 figcaption {
@@ -69,7 +66,7 @@ nav li {
 
 nav a {
     text-decoration: none;
-    color: #fff;
+    color: #000000;
     padding: 10px 20px;
     border-radius: 5px;
     margin: 0 5px;
@@ -77,8 +74,8 @@ nav a {
 }
 
 nav a:hover {
-    background-color: #fff;
-    color: #3b1c3c;
+    background-color: #000000;
+    color: #ffffff;
 }
 
 footer {
@@ -88,52 +85,20 @@ footer {
 .fa {
     font-size: 24px;
     margin: 0 10px;
-    color: #fff;
+    color: #000000;
     text-decoration: none;
 }
 
 .fa:hover {
-    color: #88888862;
+    color: #ff000062;
 }
 
 #abaut {
     display: none;
 }
 
-#fecha {
-    background-color: #ada99e;
-    color: #3a3a3a;
-    padding: 6px;
-    margin: 6px;
-    border-radius: 6px;
-    text-align: center;
-}
 
-#trabajos {
-    color: #222745;
-    background-color: #cfc6b5;
-    padding: 16px;
-    width: 100%;
-}
-
-#trabajos article {
-    background-color: #c4bcaf;
-    position: relative;
-    padding: 16px;
-    margin: 16px 0px;
-    border-radius: 16px;
-}
-
-span {
-    color: #797979;
-    font-size: 15px;
-}
-
-.madalF{
-    background-color: black;
-}
-
-#colse{
+#colse {
     text-align: end;
     display: block;
     font-size: 20px;
@@ -155,6 +120,7 @@ span {
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.9);
 }
+
 .modal::-webkit-scrollbar {
     width: 0.5em;
 }
@@ -174,45 +140,24 @@ span {
 
 /* Media Queries */
 @media (min-width: 768px) {
-    .avatar{
-        display: block;
-        width: 110px;
-        margin: auto;
-    }
-    #colse{
+
+    #colse {
         display: none;
     }
+
     .inicio {
         width: 350px;
     }
 
     nav {
         display: block;
-        margin-top: 200px;
+        margin-top: 80px;
     }
 
     footer {
-        margin-left: 95px;
-        position: absolute;
-        bottom: 30px;
+        border-top: #000000 1px solid;
+        padding-top: 16px;
         align-items: center;
-    }
-
-    #trabajos {
-        margin-top: 16px;
-        height: 58vh;
-        overflow: auto;
-        border-radius: 5px;
-      
-    }
-
-    #trabajos::-webkit-scrollbar {
-        width: 0.5em;
-    }
-
-    #trabajos::-webkit-scrollbar-thumb {
-        background-color: #000000;
-        border-radius: 5px;
     }
 
     .tlna {
@@ -234,7 +179,7 @@ span {
         overflow-y: auto;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        width: 100%;
+        width: 90%;
     }
 
     #galeria::-webkit-scrollbar {
@@ -242,21 +187,10 @@ span {
     }
 
     #galeria::-webkit-scrollbar-thumb {
-        background-color: #000000;
+        background-color: #ffffff;
         border-radius: 5px;
 
     }
-
-    /* Estilo para el primer .card */
-    .card:first-child img,
-    .card:last-child img {
-        height: 300px;
-    }
-
-    .card:first-child {
-        grid-column: span 2;
-    }
-
 
     #perfil {
         height: 100vh;
@@ -268,15 +202,18 @@ span {
 }
 
 @media (min-width: 1024px) {
-    .card:first-child img {
-        height: 350px;
-    }
+
 
     #fecha {
         position: absolute;
         right: 10px;
         top: 5px;
     }
+
+    #galeria {
+        width: 80%;
+    }
+
     #trabajos {
         height: 61vh;
     }
@@ -286,46 +223,31 @@ span {
     }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1439px) {
+    .card{
+        width: 400px;
+    }
     #galeria {
         grid-template-columns: 1fr 1fr 1fr;
-    }
-    #trabajos {
-        height: 60vh;
-        width: 96%;
-    }
-    .card:first-child img {
-        height: 400px;
-    }
-
-    /* Estilo para el primer .card */
-    .card:first-child img,
-    .card:last-child img {
-        height: 350px;
-    }
-
-    .card:first-child,
-    .card:last-child {
-        grid-column: span 3;
     }
 
     #abaut {
         height: 100vh;
         display: grid;
-        grid-template-columns: 600px 1fr;
+        grid-template-columns: 400px 1fr;
         gap: 10px;
         width: 100%;
     }
 
     #fotoAbout {
         display: block;
-        margin: 70px 0px;
         text-align: center;
     }
 
     #fotoAbout img {
-        width: 100%;
+        width: 50%;
         height: auto;
+        margin-top: 10%;
     }
 
     .modal {
@@ -335,7 +257,7 @@ span {
     .card-img-top {
         height: 350px;
     }
-    
+
     .recor {
         width: 240px;
     }
@@ -345,16 +267,18 @@ span {
     .recor {
         width: 100%;
     }
+
     #trabajos {
         height: 62vh;
     }
-    
+
 }
+
 @media (min-width: 1920px) {
 
     .modal {
         padding: 90px 600px;
     }
 
-    
+
 }
