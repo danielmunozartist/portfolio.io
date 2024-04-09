@@ -9,11 +9,19 @@ document.addEventListener('DOMContentLoaded', function () {
 function mostrarGaleria() {
     document.getElementById('galeria').style.display = 'grid';
     document.getElementById('abaut').style.display = 'none';
+    
+    // Cambiar clase de los enlaces
+    document.getElementById('linkGaleria').classList.add('on');
+    document.getElementById('linkAbaut').classList.remove('on');
 }
 
 function mostrarAbaut() {
     document.getElementById('galeria').style.display = 'none';
     document.getElementById('abaut').style.display = 'grid';
+    
+    // Cambiar clase de los enlaces
+    document.getElementById('linkGaleria').classList.remove('on');
+    document.getElementById('linkAbaut').classList.add('on');
 }
 
 fetch('./img/imagenes.json')
@@ -50,15 +58,15 @@ fetch('./img/imagenes.json')
 
             cardElement.addEventListener('click', function () {
                 modal.style.display = 'block';
-            
+
                 // Limpiar el contenido adicional antes de agregar nuevo contenido
                 additionalContent.innerHTML = '';
-            
+
                 // Recorrer cada elemento del contenido y agregarlo al modal
                 for (const key in imagen.content[0]) {
                     if (imagen.content[0].hasOwnProperty(key)) {
                         const contentElement = document.createElement('div');
-            
+
                         // Verificar si el contenido es una imagen o un video
                         if (imagen.content[0][key].endsWith('.mp4')) {
                             const videoElement = document.createElement('video');
@@ -68,8 +76,8 @@ fetch('./img/imagenes.json')
                             videoElement.loop = true;
                             videoElement.className = 'imgC';
                             contentElement.appendChild(videoElement);
-                             // Agregar evento de clic para abrir la imagen en una nueva pestaña
-                             videoElement.addEventListener('click', function () {
+                            // Agregar evento de clic para abrir la imagen en una nueva pestaña
+                            videoElement.addEventListener('click', function () {
                                 window.open(imagen.content[0][key], '_blank');
                             });
                         } else {
@@ -77,19 +85,19 @@ fetch('./img/imagenes.json')
                             imgElement.src = imagen.content[0][key];
                             imgElement.alt = `Contenido adicional ${key}`;
                             imgElement.className = 'imgC';
-            
+
                             // Agregar evento de clic para abrir la imagen en una nueva pestaña
                             imgElement.addEventListener('click', function () {
                                 window.open(imagen.content[0][key], '_blank');
                             });
-            
+
                             contentElement.appendChild(imgElement);
                         }
-            
-                        additionalContent.appendChild(contentElement); 
+
+                        additionalContent.appendChild(contentElement);
                     }
                 }
-            
+
                 // Ajusta la posición del scroll a la parte superior del modal
                 document.body.style.overflow = 'hidden'; // Desactiva el scroll del body
                 modal.scrollTop = 0; // Ajusta la posición del scroll del modal
@@ -117,7 +125,11 @@ fetch('./img/imagenes.json')
 
             // Agregar la tarjeta a la sección de galería
             galeriaSection.appendChild(cardElement);
-        
+
         });
     })
     .catch(error => console.error('Error al cargar imagenes.json', error));
+
+function openPDF() {
+    window.open('CV_Dani_EN_.pdf', '_blank');
+}
