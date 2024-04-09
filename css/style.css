@@ -45,7 +45,7 @@
 
 #galeria {
     margin: auto;
-    width: 100%;-
+    width: 100%;
 }
 
 figcaption {
@@ -72,7 +72,10 @@ nav a {
     margin: 0 5px;
     transition: background-color 0.3s;
 }
-
+.on{
+    background-color: #000000;
+    color: #ffffff;
+}
 nav a:hover {
     background-color: #000000;
     color: #ffffff;
@@ -89,9 +92,19 @@ footer {
     text-decoration: none;
 }
 
-.fa:hover {
+.enlace:hover {
     color: #ffbb00;
 }
+
+#icon {
+width: 16px;
+margin-left: 3px;
+margin-top: -5px;}
+
+#icon:hover {
+    fill: #ffbb00; /* Cambia el color a rojo */
+}
+
 
 #abaut {
     display: none;
@@ -108,7 +121,9 @@ footer {
 #fotoAbout {
     display: none;
 }
-
+.contact{
+    text-align: center;
+}
 #infoAbout {
     margin: 16px;
 }
