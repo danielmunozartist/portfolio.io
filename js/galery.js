@@ -54,7 +54,7 @@ fetch('./img/imagenes.json')
 
             // Crear un nuevo elemento de tarjeta para la galería
             const cardElement = document.createElement('div');
-            cardElement.className = 'card m-2 animate__animated animate__slideInUp';
+            cardElement.className = 'card m-1 animate__animated animate__slideInUp';
 
             cardElement.addEventListener('click', function () {
                 modal.style.display = 'block';
